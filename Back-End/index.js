@@ -18,20 +18,29 @@ app.use(cors({ }));
 app.use(express.json());
 
 const users = require('./models/users')
+const assur = require('./models/assur')
+const boutique = require('./models/boutique')
+const reparation = require('./models/reparation')
 
 adminbro.registerAdapter(mongooseadminbro)
 
 const adminBroOptions = {
     resources: [
       {
-        resource: users,
-        options: {
-          properties: {
-            name: { isVisible: true, isEditable: true },
-            age: { isVisible: true, isEditable: true },
-            adresse: { isVisible: true, isEditable: true },
-          },
-        },
+        resource: users
+        
+      },
+      {
+        resource: assur
+        
+      },
+      {
+        resource: boutique
+        
+      },
+      {
+        resource: reparation
+        
       },
     ],
   };
