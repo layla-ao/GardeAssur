@@ -4,5 +4,12 @@
     "env": "^0.0.2",
     "express": "^4.19.2",
     "tslib": "^2.6.2"
+  },
+
+  "scripts": {
+    "start": "node frontend/index.js",
+    "server": "nodemon backend/app.js",
+    "client": "cd frontend && npm run start",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
   }
 }

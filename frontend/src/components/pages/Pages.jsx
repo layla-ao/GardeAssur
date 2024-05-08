@@ -1,14 +1,28 @@
-import React from "react"
-import Header from "../common/header/Header"
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-import Home from "../home/Home"
-import Footer from "../common/footer/Footer"
-import About from "../about/About"
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import Header from "../common/header/Header";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "../home/Home";
+import Footer from "../common/footer/Footer";
+import About from "../about/About";
+import Reclamation from "../reclamation/Reclamation";
+import Boutique from "../services/Boutique";
 
-import Reclamation from "../reclamation/Reclamation"
-import Boutique from "../services/Boutique"
+function Pages() {
+  const [data, setData] = useState(null);
 
-const Pages = () => {
+  useEffect(() => {
+    // Effectue une requête GET à votre backend pour récupérer des données
+    axios.get("http://localhost:3001/admin")
+      .then(response => {
+        // Met à jour l'état avec les données reçues du backend
+        setData(response.data);
+      })
+      .catch(error => {
+        console.error("Erreur lors de la récupération des données:", error);
+      });
+  }, []);
+
   return (
     <>
       <Router>
@@ -22,7 +36,7 @@ const Pages = () => {
         <Footer />
       </Router>
     </>
-  )
+  );
 }
 
-export default Pages
+export default Pages;
