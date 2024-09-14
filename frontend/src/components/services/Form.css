@@ -30,16 +30,33 @@
     height: 100px;
   }
   
-  .btn {
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn-reset,
+.btn-submit {
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
     font-size: 16px;
-    margin-top: 20px;
-  }
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-reset:hover,
+.btn-submit:hover {
+    background-color: #3e8e41;
+}
+
+.btn-reset {
+    margin-right: 10px;
+}
+
   
   .success-box {
     background-color: #4CAF50;

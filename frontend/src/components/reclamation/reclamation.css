@@ -6,16 +6,14 @@
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 500px;
+  width: 500px; /* Largeur fixe du formulaire */
   border: 1px solid #ccc;
   padding: 30px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
+  width: 100%; /* Occupera toute la largeur disponible dans son parent */
   margin-bottom: 20px;
 }
 
@@ -29,7 +27,7 @@ input[type="text"],
 input[type="date"],
 textarea,
 select {
-  width: 100%;
+  width: 100%; /* Occupera toute la largeur disponible dans son parent */
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -49,6 +47,7 @@ input[type="file"] {
 }
 
 button {
+  width: 50%; /* Occupera toute la largeur disponible dans son parent */
   background-color: #4CAF50;
   color: white;
   padding: 10px 20px;
@@ -58,7 +57,9 @@ button {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
+.btn{
+  width: 20%;
+}
 button:hover {
   background-color: #3e8e41;
 }
@@ -68,7 +69,6 @@ button:hover {
   border: 1px solid #ccc;
   padding: 30px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  width: 500px;
 }
 
 .claim-summary h2 {

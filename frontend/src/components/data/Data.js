@@ -1,7 +1,7 @@
 export const nav = [
   {
     text: "home",
-    path: "/",
+    path: "/home",
   },
   {
     text: "about",
@@ -11,7 +11,10 @@ export const nav = [
     text:"boutique",
     path: "/boutique",
   },
-
+  {
+    text: "assurance",
+    path: "/assurance",
+  },
   {
     text: "reclamation",
     path: "/reclamation",
@@ -124,7 +127,7 @@ export const boutique = [
       {
         id: 1,
         couleur: 'Gris',
-        ram: 8,
+        ram: "8 GB",
         image: '../images/produit/tel1.png',
         modele: 'iPhone 12 Pro',
         prix:2500  ,
@@ -133,23 +136,102 @@ export const boutique = [
       {
         id: 2,
         couleur: 'Rose',
-        ram: 5,
+        ram: "5 GB",
         image: '../images/produit/tel2.png',
         modele: 'Oppo Reno 10 Pro',
-        prix:2500  ,
+        prix:1200  ,
         serie:'MA345BTT32'
       },
         {
           id: 3,
         couleur: 'blanc',
-        ram: 5,
+        ram: "5 GB",
         image: '../images/produit/tel3.png',
         modele: 'Oppo Reno 11 ',
-        prix:2500  ,
+        prix:1500  ,
         serie:'MA345BTT32'
         },
-       
+        {
+          id: 1,
+          couleur: 'Noir',
+          ram: "Intel Core I7  Ecran: 15.6  Processeur: I7-10750H",
+          image: '../images/produit/dell.png',
+          modele: 'Dell ',
+          prix: 3699 ,
+          serie:'KA84A3BT52'
+        },
+        {
+          id: 1,
+          couleur: 'Gris',
+          ram: "Processeur AMD Athlon Silver 7120U  Écran 15,6",
+          image: '../images/produit/lenovo.png',
+          modele: 'Lenovo',
+          prix:890  ,
+          serie:'KJH856LM9'
+        },
+        {
+          id: 1,
+          couleur: 'Noir',
+          ram: "Processeur Intel Core i5-12450H Écran 15.6 FULL HD IPS",
+          image: '../images/produit/msi.png',
+          modele: 'Msi',
+          prix:3449  ,
+          serie:'LMO2140AZZ'
+        },     
+        {
+          id: 1,
+          couleur: 'Noir',
+          ram:"Cuisinière Smart UNIONAIRE - Nombre de Feux: 5 Feux - Largeur: 90 cm - Grille en fonte - Éclairage du four ",
+          image: '../images/produit/gaz.png',
+          modele: 'Gaz UNIONAIRE',
+          prix:1639  ,
+          serie:'ASE563HL2'
+        },
+        {
+          id: 2,
+          couleur: 'Noir',
+         ram:" Capacité 9 kg - Classe A+++, Essorage variable jusqu'à 1600 tours/min, 16 Programmes,  Smart Touch",
+          image: '../images/produit/ghasla.png',
+          modele: 'Machine à laver',
+          prix:1329  ,
+          serie:'QG41kLM85F'
+        },
+        {
+          id: 1,
+          couleur: 'Gris',
+          ram:"32 Litres RF: MOD.KF3125 710W Gris",
+          image: '../images/produit/micro.png',
+          modele: 'Four Electrique',
+          prix:129  ,
+          serie:'AZE123RTY8'
+        },
         
+]
+export const assurance = [
+
+  {
+    id: 1,
+    image: '../images/location/cart.jpg',
+    nom: 'Carte Vie Assurance',
+    service:'Assurane Auto , Assurance technologiques, Assurance Santé ',
+    description:"L assurance carte vie est une forme d assurance-vie qui offre une protection financière à long terme à l assuré et à ses bénéficiaires en cas de décès de l assuré. ",
+  },
+  {
+    id: 2,
+    image: '../images/location/ag1.jpg',
+    nom: 'Gat Assurance',
+    service:'Assurane Auto , Assurance technologiques, Assurance Santé ',
+    description:"GAT Assurance est une compagnie d'assurance réputée en Tunisie, offrant une large gamme de produits d'assurance et un service clientèle de qualité"
+  },
+    {
+      id: 3,
+    image: '../images/location/ag3.jpg',
+    nom: 'Star Assurance',
+    service:'Assurane Voyage, Assurance technologiques, Assurance Auto',
+    description:"L'assurance Star est une forme d'assurance qui offre une gamme de protections pour les personnes et les biens, souvent regroupées sous un seul contrat."
+    },
+   
+    
 ]
 
 

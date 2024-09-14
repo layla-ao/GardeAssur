@@ -8,6 +8,7 @@ const expressadminbro = require('@admin-bro/express');
 const mongooseadminbro = require('@admin-bro/mongoose');
 const path = require('path');
 
+
 const app = express();
 const uri = 'mongodb://localhost:27017/assur_db';
 mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true});
@@ -33,6 +34,7 @@ const assur = require('./models/assur');
 const boutique = require('./models/boutique');
 const reparation = require('./models/reparation');
 const produits = require('./models/produits');
+
 
 adminbro.registerAdapter(mongooseadminbro);
 

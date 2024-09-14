@@ -1,41 +1,31 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import Header from "../common/header/Header";
+import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+import Header from "../common/header/Header";
 import Home from "../home/Home";
 import Footer from "../common/footer/Footer";
 import About from "../about/About";
 import Reclamation from "../reclamation/Reclamation";
 import Boutique from "../services/Boutique";
+import Assurance from "../assurance/Assurance";
+import Login from "../login/login"; // Assurez-vous que ce chemin est correct
+import Signup from "../signup/Signup"; // Assurez-vous que ce chemin est correct
 
 function Pages() {
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    // Effectue une requête GET à votre backend pour récupérer des données
-    axios.get("http://localhost:3001/admin")
-      .then(response => {
-        // Met à jour l'état avec les données reçues du backend
-        setData(response.data);
-      })
-      .catch(error => {
-        console.error("Erreur lors de la récupération des données:", error);
-      });
-  }, []);
-
   return (
-    <>
-      <Router>
-        <Header />
-        <Switch>
-          <Route exact path='/' component={Home} />
-          <Route exact path='/about' component={About} />
-          <Route exact path='/boutique' component={Boutique} />
-          <Route exact path='/reclamation' component={Reclamation} />
-        </Switch>
-        <Footer />
-      </Router>
-    </>
+    <Router>
+      <Header />
+      <Switch>
+        <Route exact path='/' component={Login} />
+        <Route exact path='/home' component={Home} />
+        <Route exact path='/about' component={About} />
+        <Route exact path='/boutique' component={Boutique} />
+        <Route exact path='/reclamation' component={Reclamation} />
+        <Route exact path='/assurance' component={Assurance} />
+        <Route exact path='/signup' component={Signup} />
+      </Switch>
+      <Footer />
+    </Router>
   );
 }
 
